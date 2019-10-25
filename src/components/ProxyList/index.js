@@ -64,6 +64,7 @@ export default ({ data, loading }) => (
         pinged_at: moment(dataItem.pinged_at).utc('UTC+2').fromNow(),
       }))}
       columns={columns}
+      pageSize={10}
     />
   </ProxyListWrapper>
 );
