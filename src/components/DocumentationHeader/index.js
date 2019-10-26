@@ -3,15 +3,7 @@ import styled from 'styled-components';
 
 const Code = styled.code`
   background-color: #f1f1f1;
-
-  a {
-    text-decoration: none;
-    color: #505050;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+  font-size: 13px;
 `;
 
 const DocumentationWrapper = styled.div`
@@ -20,6 +12,6 @@ const DocumentationWrapper = styled.div`
 
 export default () => (
   <DocumentationWrapper>
-    <Code>GET <a href='https://rebrand.ly/handyproxy' target='_blank'>https://rebrand.ly/handyproxy</a></Code>
+    <Code>GET https://handyproxy.io/api/?token=YOUR_API_KEY</Code>
   </DocumentationWrapper>
 );

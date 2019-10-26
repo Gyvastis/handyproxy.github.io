@@ -4,7 +4,8 @@ import fetch from 'node-fetch';
 import 'normalize.css';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
-import Documentation from 'components/Documentation';
+import DocumentationHeader from 'components/DocumentationHeader';
+import DocumentationMiddle from 'components/DocumentationMiddle';
 import ProxyList from 'components/ProxyList';
 import Reason from 'components/Reason';
 import Statistics from 'components/Statistics';
@@ -15,7 +16,7 @@ const MainWrapper = styled.div`
 `;
 
 const fetchProxyData = () =>
-  fetch('https://dl.dropboxusercontent.com/s/6dmeggpks2tr9a8/all.json')
+  fetch('https://handyproxy.io/api/?token=3386327b3d279510ed832175625be72c&limit=100&format=long')
     .then(response => response.json());
 
 class Main extends React.Component {
@@ -30,24 +31,25 @@ class Main extends React.Component {
   }
 
   componentWillMount() {
-    fetchProxyData().then(({ data, metadata }) => {
+    fetchProxyData().then(({ data }) => {
       this.setState({
         ...this.state,
         data,
-        metadata,
         loading: false
       });
     });
   }
 
   render() {
-    const { data, metadata, loading } = this.state;
+    const { data, loading } = this.state;
+    const metadata = {};
 
     return (
       <MainWrapper>
         <Header />
-        <Documentation />
+        <DocumentationHeader />
         <ProxyList data={data} loading={loading} />
+        <DocumentationMiddle />
         <Statistics countryMetadata={metadata.perCountry} />
         <Reason />
         <Footer />

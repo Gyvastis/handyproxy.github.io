@@ -9,8 +9,18 @@ const FooterWrapper = styled.div`
   margin-top: 30px;
 `;
 
+const A = styled.a`
+  text-decoration: none;
+  color: inherit;
+`;
+
 export default () => (
   <FooterWrapper>
-    <a target='_blank' href='https://twitter.com/@VaidasBagdonas'><TwitterIcon /></a>
+    <p>
+      <a target='_blank' rel='nofollow' href='https://twitter.com/@VaidasBagdonas'><TwitterIcon /></a>
+    </p>
+    <p>
+      With  <A href="_blank">Vaidas Bagdonas</A>
+    </p>
   </FooterWrapper>
 );

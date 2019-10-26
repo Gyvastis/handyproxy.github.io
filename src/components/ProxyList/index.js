@@ -12,7 +12,7 @@ const ProxyListWrapper = styled.div`
 const columns = [
   {
     Header: 'Country',
-    accessor: 'country_code',
+    accessor: 'country',
     Cell: ({value}) => (
       <span>
         <ReactCountryFlag code={value} svg styleProps={{
@@ -39,8 +39,8 @@ const columns = [
     width: 80,
   },
   {
-    Header: 'Anonimity',
-    accessor: 'anonimity',
+    Header: 'Anonymity',
+    accessor: 'anonymity',
   },
   {
     Header: 'Ping (ms)',
@@ -61,7 +61,7 @@ export default ({ data, loading }) => (
       data={data}
       resolveData={data => data.map(dataItem => ({
         ...dataItem,
-        pinged_at: moment(dataItem.pinged_at).utc('UTC+2').fromNow(),
+        pinged_at: moment(dataItem.pinged_at).fromNow(),
       }))}
       columns={columns}
       pageSize={10}
