@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "chart.js": "^2.8.0",
-    "moment": "^2.24.0",
+    "luxon": "^1.19.3",
     "node-fetch": "^2.6.0",
     "normalize.css": "^8.0.1",
     "rainbowvis.js": "^1.0.1",

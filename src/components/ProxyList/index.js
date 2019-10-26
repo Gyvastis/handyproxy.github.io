@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ReactTable from 'react-table';
-import moment from 'moment';
+import { DateTime, Interval } from 'luxon';
 import ReactCountryFlag from "react-country-flag";
 import 'react-table/react-table.css';
 
@@ -59,9 +59,9 @@ export default ({ data, loading }) => (
       className='-striped -highlight'
       loading={loading}
       data={data}
-      resolveData={data => data.map(dataItem => ({
+      resolveData={data => data.map((dataItem = {}) => ({
         ...dataItem,
-        pinged_at: moment(dataItem.pinged_at).fromNow(),
+        pinged_at: `${dataItem.pinged_at ? Math.round(Interval.fromDateTimes(DateTime.fromISO(dataItem.pinged_at), DateTime.local()).length('minutes')) : '\?'} minutes ago`,
       }))}
       columns={columns}
       pageSize={10}
