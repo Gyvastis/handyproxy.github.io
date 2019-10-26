@@ -10,6 +10,10 @@ const H3 = styled.h3`
   margin-top: 30px;
 `;
 
+const P = styled.p`
+  text-align: center;
+`;
+
 const getRainbowColors = numberOfItems => {
   if(numberOfItems <= 0) {
     return [];
@@ -28,9 +32,26 @@ const getRainbowColors = numberOfItems => {
   return colors;
 }
 
+const getTotalProxyCount = countryMetadata => {
+  let totalProxyCount = 0;
+
+  Object.values(countryMetadata.proxy_count).map(count => totalProxyCount+=parseInt(count));
+
+  return totalProxyCount;
+};
+
+const getTotalCountryCount = countryMetadata => {
+  let totalCountryCount = 0;
+
+  Object.keys(countryMetadata.proxy_count).map(country => totalCountryCount++);
+
+  return totalCountryCount;
+}
+
 export default ({ countryMetadata = {} }) => (
   <div>
     <H3>Sexy stats</H3>
+    <P>{getTotalProxyCount(countryMetadata)} proxies in {getTotalCountryCount(countryMetadata)} countries</P>
     <Bar
       data={{
         labels: Object.keys(countryMetadata.average_ping),
