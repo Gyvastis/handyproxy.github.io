@@ -20,5 +20,11 @@ export default () => (
     <Code>{JSON.stringify({"data":[{"ip":"109.70.189.75","port":"60282"}]}, null, "\t")}</Code>
     <p>Example output with <Code>&format=long</Code>:</p>
     <Code>{JSON.stringify({"data":[{"ip":"109.70.189.75","port":"60282","country":"RU","protocol":"https","anonymity":"anonymous","ping":249,"pinged_at":"2019:10:26 01:08:44"}]}, null, "\t")}</Code>
+    <p>
+      Proxy anonimity types:<br />
+      <Code>elite</Code> connection looks like a regular client<br />
+      <Code>anonymous</Code> no ip is forworded but target site could still tell it's a proxy<br />
+      <Code>transparent</Code> ip is forworded and target site would be able to tell it's a proxy<br />
+    </p>
   </DocumentationWrapper>
 );
