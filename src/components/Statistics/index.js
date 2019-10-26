@@ -33,10 +33,10 @@ export default ({ countryMetadata = {} }) => (
     <H3>Sexy stats</H3>
     <Bar
       data={{
-        labels: Object.keys(countryMetadata),
+        labels: Object.keys(countryMetadata.average_ping),
         datasets: [{
-          data: Object.values(countryMetadata).map(({ping}) => ping.avg),
-          backgroundColor: getRainbowColors(Object.keys(countryMetadata).length),
+          data: Object.values(countryMetadata.average_ping),
+          backgroundColor: getRainbowColors(Object.keys(countryMetadata.average_ping).length),
         }]
       }}
       options={{
@@ -51,10 +51,10 @@ export default ({ countryMetadata = {} }) => (
     />
     <Bar
       data={{
-        labels: Object.keys(countryMetadata),
+        labels: Object.keys(countryMetadata.proxy_count),
         datasets: [{
-          data: Object.values(countryMetadata).map(({count}) => count),
-          backgroundColor: getRainbowColors(Object.keys(countryMetadata).length),
+          data: Object.values(countryMetadata.proxy_count),
+          backgroundColor: getRainbowColors(Object.keys(countryMetadata.proxy_count).length),
         }]
       }}
       options={{

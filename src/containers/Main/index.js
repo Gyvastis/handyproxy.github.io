@@ -19,13 +19,20 @@ const fetchProxyData = () =>
   fetch(`${process.env.REACT_APP_API_URL}/?token=${process.env.REACT_APP_API_KEY}&limit=100&format=long`)
     .then(response => response.json());
 
+const fetchProxyStats = () =>
+  fetch(`${process.env.REACT_APP_API_URL}/stats?token=${process.env.REACT_APP_API_KEY}`)
+    .then(response => response.json());
+
 class Main extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       data: [],
-      metadata: [],
+      meta: {
+        average_ping: {},
+        proxy_count: {}
+      },
       loading: true
     };
   }
@@ -38,19 +45,24 @@ class Main extends React.Component {
         loading: false
       });
     });
+    fetchProxyStats().then(({ data }) => {
+      this.setState({
+        ...this.state,
+        meta: data,
+      });
+    });
   }
 
   render() {
-    const { data, loading } = this.state;
-    const metadata = {};
-console.log(process.env);
+    const { data, meta, loading } = this.state;
+
     return (
       <MainWrapper>
         <Header />
         <DocumentationHeader />
         <ProxyList data={data} loading={loading} />
         <DocumentationMiddle />
-        <Statistics countryMetadata={metadata.perCountry} />
+        <Statistics countryMetadata={meta} />
         <Reason />
         <Footer />
       </MainWrapper>
