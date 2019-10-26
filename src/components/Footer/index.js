@@ -16,11 +16,8 @@ const A = styled.a`
 
 export default () => (
   <FooterWrapper>
-    <p>
-      <a target='_blank' rel='nofollow' href='https://twitter.com/@VaidasBagdonas'><TwitterIcon /></a>
-    </p>
-    <p>
-      With  <A href="_blank">Vaidas Bagdonas</A>
-    </p>
+    <a target='_blank' rel='nofollow' href='https://twitter.com/@VaidasBagdonas'><TwitterIcon /></a>
+    <br />
+    With ❤️<A target="_blank" href="https://vaidasbagdonas.com">Vaidas Bagdonas</A>
   </FooterWrapper>
 );
