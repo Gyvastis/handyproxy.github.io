@@ -18,6 +18,7 @@ export default () => (
   <FooterWrapper>
     <a target='_blank' rel='nofollow' href='https://twitter.com/@VaidasBagdonas'><TwitterIcon /></a>
     <br />
-    With ❤️<A target="_blank" href="https://vaidasbagdonas.com">Vaidas Bagdonas</A>
+    With ❤️<A target="_blank" href="https://vaidasbagdonas.com">Vaidas Bagdonas</A><br />
+    Amsterdam
   </FooterWrapper>
 );

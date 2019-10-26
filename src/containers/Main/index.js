@@ -16,7 +16,7 @@ const MainWrapper = styled.div`
 `;
 
 const fetchProxyData = () =>
-  fetch('https://handyproxy.io/api/?token=3386327b3d279510ed832175625be72c&limit=100&format=long')
+  fetch(`${process.env.REACT_APP_API_URL}/?token=${process.env.REACT_APP_API_KEY}&limit=100&format=long`)
     .then(response => response.json());
 
 class Main extends React.Component {
@@ -43,7 +43,7 @@ class Main extends React.Component {
   render() {
     const { data, loading } = this.state;
     const metadata = {};
-
+console.log(process.env);
     return (
       <MainWrapper>
         <Header />
