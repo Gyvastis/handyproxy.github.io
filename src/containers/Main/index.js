@@ -11,9 +11,6 @@ import ProxyList from 'components/ProxyList';
 import Reason from 'components/Reason';
 import Statistics from 'components/Statistics';
 
-ReactGA.initialize('UA-39991152-15');
-ReactGA.pageview(window.location.pathname + window.location.search);
-
 const MainWrapper = styled.div`
     margin: 50px auto;
     width: 900px;
@@ -42,6 +39,9 @@ class Main extends React.Component {
   }
 
   componentWillMount() {
+    ReactGA.initialize('UA-39991152-15');
+    ReactGA.pageview(window.location.pathname + window.location.search);
+
     fetchProxyData().then(({ data }) => {
       this.setState({
         ...this.state,
