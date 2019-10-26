@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import fetch from 'node-fetch';
 import 'normalize.css';
+import ReactGA from 'react-ga';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import DocumentationHeader from 'components/DocumentationHeader';
@@ -9,6 +10,9 @@ import DocumentationMiddle from 'components/DocumentationMiddle';
 import ProxyList from 'components/ProxyList';
 import Reason from 'components/Reason';
 import Statistics from 'components/Statistics';
+
+ReactGA.initialize('UA-39991152-15');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const MainWrapper = styled.div`
     margin: 50px auto;
