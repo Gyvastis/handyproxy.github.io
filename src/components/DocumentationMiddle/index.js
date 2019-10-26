@@ -12,7 +12,7 @@ const DocumentationWrapper = styled.div`
 
 export default () => (
   <DocumentationWrapper>
-    <p>Get the <b>API key</b> in your email:</p>
+    <p>Get the <b>API key</b> to your email:</p>
     <Code>GET https://handyproxy.io/api/key/?email=your@real.email</Code>
     <p>All available API filters:</p>
     <Code>GET https://handyproxy.io/api/?token=YOUR_API_KEY&limit=5&protocol=https&anonymity=elite&country=US&max_ping=1000</Code>
