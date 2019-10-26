@@ -41,7 +41,6 @@ export default () => (
     <P>
       <List>
         <li>Add more protocols (socks, etc)</li>
-        <li>Internal check of the proxies instead of 3rd party</li>
         <li>Checks agains Google, Facebook, etc</li>
         <li>...and hopefully more!</li>
       </List>

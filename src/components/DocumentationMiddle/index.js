@@ -26,5 +26,6 @@ export default () => (
       <Code>anonymous</Code> no ip is forworded but target site could still tell it's a proxy<br />
       <Code>transparent</Code> ip is forworded and target site would be able to tell it's a proxy<br />
     </p>
+    <p>Ping is done with a real basic request</p>
   </DocumentationWrapper>
 );
