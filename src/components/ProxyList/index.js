@@ -9,6 +9,47 @@ const ProxyListWrapper = styled.div`
   margin: 20px 0;
 `;
 
+const SpeedCell = styled.div`
+  position: relative;
+`;
+
+const SpeedBarWrapper = styled.div`
+  position: absolute;
+  width: 100%;
+  text-align: left;
+  left: 0;
+  top: 0;
+  background: 0 0;
+`;
+
+const SpeedBar = styled.span`
+  height: 20px;
+  display: inline-block;
+  z-index: 5;
+  background: ${({width}) => {
+    if(width > 70) {
+      return '#e00000';
+    }
+    else if(width > 30) {
+      return '#ffd500';
+    }
+    else {
+      return '#79bc00';
+    }
+  }};
+  width: ${({width}) => width}px;
+`;
+
+const SpeedText = styled.span`
+  z-index: 1;
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  padding: 2px 0 0 14px;
+`;
+
+const maxPing = 5000;
+
 const columns = [
   {
     Header: 'Country',
@@ -43,9 +84,17 @@ const columns = [
     accessor: 'anonymity',
   },
   {
-    Header: 'Ping (ms)',
+    Header: 'Ping',
     accessor: 'ping',
     width: 90,
+    Cell: ({value}) => (
+      <SpeedCell>
+        <SpeedText>{value} ms</SpeedText>
+        <SpeedBarWrapper>
+          <SpeedBar width={Math.round(value * 100 / maxPing)} />
+        </SpeedBarWrapper>
+      </SpeedCell>
+    ),
   },
   {
     Header: 'Pinged',
