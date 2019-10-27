@@ -68,6 +68,7 @@ const columns = [
   {
     Header: 'IP address',
     accessor: 'ip',
+    width: 160,
   },
   {
     Header: 'Port',
@@ -77,11 +78,12 @@ const columns = [
   {
     Header: 'Protocol',
     accessor: 'protocol',
-    width: 80,
+    width: 90,
   },
   {
     Header: 'Anonymity',
     accessor: 'anonymity',
+    width: 100,
   },
   {
     Header: 'Ping',

@@ -13,7 +13,7 @@ import Statistics from 'components/Statistics';
 
 const MainWrapper = styled.div`
     margin: 50px auto;
-    width: 900px;
+    width: 800px;
 `;
 
 const fetchProxyData = () =>
