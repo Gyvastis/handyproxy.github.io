@@ -112,7 +112,7 @@ export default ({ data, loading }) => (
       data={data}
       resolveData={data => data.map((dataItem = {}) => ({
         ...dataItem,
-        pinged_at: `${dataItem.pinged_at ? Math.round(Interval.fromDateTimes(DateTime.fromISO(dataItem.pinged_at), DateTime.local().setZone('Europe/Vilnius')).length('minutes')) : '\?'} minutes ago`,
+        pinged_at: `${dataItem.pinged_at ? Math.round(Interval.fromDateTimes(DateTime.fromISO(dataItem.pinged_at, { zone: 'Europe/Vilnius' }), DateTime.local().setZone('Europe/Vilnius')).length('minutes')) : '\?'} minutes ago`,
       }))}
       columns={columns}
       pageSize={10}
