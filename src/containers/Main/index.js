@@ -16,7 +16,8 @@ const MainWrapper = styled.div`
     width: 800px;
 `;
 
-const fetchProxyData = () => fetch('http://localhost:3000/proxies.json').then(res => res.json());
+const proxyDumpUrl = /http:\/\/localhost/.test(document.location.href) ? 'http://localhost:3000/proxies.json' : 'https://handyproxy-proxies.s3.eu-central-1.amazonaws.com/proxies.json';
+const fetchProxyData = () => fetch(proxyDumpUrl).then(res => res.json());
 
 const calculateProxyStats = proxies => {
   const proxyCountries = [];
