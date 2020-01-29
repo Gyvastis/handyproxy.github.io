@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "081815adb383fe1e2ee4afc06b8c1a5e",
+    "revision": "b2e3973b944b2cb43592a06dfe47927c",
     "url": "/handyproxy/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/handyproxy/static/css/2.46fbdb1c.chunk.css"
   },
   {
-    "revision": "7ba429cdad39dcbfbc71",
+    "revision": "48050bd83850a98afc6b",
     "url": "/handyproxy/static/css/main.a5df7661.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/handyproxy/static/js/2.1569b4f7.chunk.js"
   },
   {
-    "revision": "7ba429cdad39dcbfbc71",
-    "url": "/handyproxy/static/js/main.774641ed.chunk.js"
+    "revision": "48050bd83850a98afc6b",
+    "url": "/handyproxy/static/js/main.011a68ef.chunk.js"
   },
   {
     "revision": "b8f2fae66d3da39a433d",

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/handyproxy/precache-manifest.d637f22f8dd01a302fdf0c35103765e3.js"
+  "/handyproxy/precache-manifest.3d8976d665a44cbb01321a608c2adc3f.js"
 );
 
 self.addEventListener('message', (event) => {
