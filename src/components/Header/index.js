@@ -32,10 +32,10 @@ export default () => (
   <HeaderWrapper>
     <Helmet>
       <meta charSet="utf-8" />
-      <title>API of fastest public proxies for your bots & scrapers | HandyProxy.io</title>
+      <title>Fastest public proxies for your bots & scrapers | HandyProxy.io</title>
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"></link>
     </Helmet>
     <H1><span role='img' aria-label='promise-emoji'>🤞</span><a href='/'>HandyProxy.io</a></H1>
-    <Description>API of fastest public proxies for your bots & scrapers</Description>
+    <Description>Fast, reliable, no nonsense public proxies</Description>
   </HeaderWrapper>
 );

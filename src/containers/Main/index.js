@@ -16,13 +16,33 @@ const MainWrapper = styled.div`
     width: 800px;
 `;
 
-const fetchProxyData = () =>
-  fetch(`${process.env.REACT_APP_API_URL}/?token=${process.env.REACT_APP_API_KEY}&limit=100&format=long`)
-    .then(response => response.json());
+const fetchProxyData = () => fetch('http://localhost:3000/proxies.json').then(res => res.json());
 
-const fetchProxyStats = () =>
-  fetch(`${process.env.REACT_APP_API_URL}/stats?token=${process.env.REACT_APP_API_KEY}`)
-    .then(response => response.json());
+const calculateProxyStats = proxies => {
+  const proxyCountries = [];
+  proxies.map(proxy => {
+    if(proxy.countryCode && proxyCountries.indexOf(proxy.countryCode) < 0) {
+      proxyCountries.push(proxy.countryCode);
+    }
+  });
+  proxyCountries.sort();
+
+  let proxyCountPerCountry = {};
+  let averagePingPerCountry = {};
+  proxyCountries.map(countryCode => {
+    const countryProxies = proxies.filter(proxy => proxy.countryCode === countryCode);
+    proxyCountPerCountry[countryCode] = countryProxies.length;
+
+    averagePingPerCountry[countryCode] = 0;
+    countryProxies.map(proxy => averagePingPerCountry[countryCode] += proxy.responseTime);
+    averagePingPerCountry[countryCode] = averagePingPerCountry[countryCode] / proxyCountPerCountry[countryCode];
+  });
+
+  return {
+    average_ping: averagePingPerCountry,
+    proxy_count: proxyCountPerCountry
+  };
+};
 
 class Main extends React.Component {
   constructor(props) {
@@ -42,17 +62,16 @@ class Main extends React.Component {
     ReactGA.initialize('UA-39991152-15');
     ReactGA.pageview(window.location.pathname + window.location.search);
 
-    fetchProxyData().then(({ data }) => {
+    fetchProxyData().then(proxies => {
       this.setState({
         ...this.state,
-        data,
+        data: proxies,
         loading: false
       });
-    });
-    fetchProxyStats().then(({ data }) => {
+
       this.setState({
         ...this.state,
-        meta: data,
+        meta: calculateProxyStats(proxies),
       });
     });
   }

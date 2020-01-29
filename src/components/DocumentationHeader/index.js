@@ -12,6 +12,6 @@ const DocumentationWrapper = styled.div`
 
 export default () => (
   <DocumentationWrapper>
-    <Code>GET https://handyproxy.io/api/?token=YOUR_API_KEY</Code>
+    <Code>GET https://handyproxy-proxies.s3.eu-central-1.amazonaws.com/proxies.json</Code>
   </DocumentationWrapper>
 );

@@ -48,12 +48,12 @@ const SpeedText = styled.span`
   padding: 2px 0 0 14px;
 `;
 
-const maxPing = 5000;
+const maxPing = 6000;
 
 const columns = [
   {
     Header: 'Country',
-    accessor: 'country',
+    accessor: 'countryCode',
     Cell: ({value}) => (
       <span>
         <ReactCountryFlag code={value} svg styleProps={{
@@ -63,32 +63,32 @@ const columns = [
         {value}
       </span>
     ),
-    width: 80,
+    // width: 80,
   },
   {
     Header: 'IP address',
     accessor: 'ip',
-    width: 160,
+    // width: 180,
   },
   {
     Header: 'Port',
     accessor: 'port',
-    width: 90,
+    // width: 90,
   },
   {
     Header: 'Protocol',
     accessor: 'protocol',
-    width: 90,
+    // width: 110,
   },
   {
     Header: 'Anonymity',
     accessor: 'anonymity',
-    width: 100,
+    // width: 120,
   },
   {
     Header: 'Ping',
-    accessor: 'ping',
-    width: 90,
+    accessor: 'responseTime',
+    // width: 100,
     Cell: ({value}) => (
       <SpeedCell>
         <SpeedText>{value} ms</SpeedText>
@@ -98,10 +98,6 @@ const columns = [
       </SpeedCell>
     ),
   },
-  {
-    Header: 'Pinged',
-    accessor: 'pinged_at',
-  },
 ];
 
 export default ({ data, loading }) => (
@@ -110,10 +106,6 @@ export default ({ data, loading }) => (
       className='-striped -highlight'
       loading={loading}
       data={data}
-      resolveData={data => data.map((dataItem = {}) => ({
-        ...dataItem,
-        pinged_at: `${dataItem.pinged_at ? Math.round(Interval.fromDateTimes(DateTime.fromISO(dataItem.pinged_at, { zone: 'Europe/Vilnius' }), DateTime.local().setZone('Europe/Vilnius')).length('minutes')) : '\?'} minutes ago`,
-      }))}
       columns={columns}
       pageSize={10}
     />
