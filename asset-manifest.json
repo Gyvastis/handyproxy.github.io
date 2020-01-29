@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/handyproxy/handyproxy/static/css/main.a5df7661.chunk.css",
+    "main.js": "/handyproxy/handyproxy/static/js/main.bf0eaa1d.chunk.js",
+    "main.js.map": "/handyproxy/handyproxy/static/js/main.bf0eaa1d.chunk.js.map",
+    "runtime-main.js": "/handyproxy/handyproxy/static/js/runtime-main.82d33c73.js",
+    "runtime-main.js.map": "/handyproxy/handyproxy/static/js/runtime-main.82d33c73.js.map",
+    "static/css/2.46fbdb1c.chunk.css": "/handyproxy/handyproxy/static/css/2.46fbdb1c.chunk.css",
+    "static/js/2.03c04aab.chunk.js": "/handyproxy/handyproxy/static/js/2.03c04aab.chunk.js",
+    "static/js/2.03c04aab.chunk.js.map": "/handyproxy/handyproxy/static/js/2.03c04aab.chunk.js.map",
+    "index.html": "/handyproxy/handyproxy/index.html",
+    "precache-manifest.1d498a41346e5d33f439fa4279f5e832.js": "/handyproxy/handyproxy/precache-manifest.1d498a41346e5d33f439fa4279f5e832.js",
+    "service-worker.js": "/handyproxy/handyproxy/service-worker.js",
+    "static/css/2.46fbdb1c.chunk.css.map": "/handyproxy/handyproxy/static/css/2.46fbdb1c.chunk.css.map",
+    "static/css/main.a5df7661.chunk.css.map": "/handyproxy/handyproxy/static/css/main.a5df7661.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.82d33c73.js",
+    "static/css/2.46fbdb1c.chunk.css",
+    "static/js/2.03c04aab.chunk.js",
+    "static/css/main.a5df7661.chunk.css",
+    "static/js/main.bf0eaa1d.chunk.js"
+  ]
+}
