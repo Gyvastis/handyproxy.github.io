@@ -1,6 +1,6 @@
 {
   "name": "handyproxy",
-  "homepage": "https://github.com/Gyvastis/handyproxy",
+  "homepage": "https://gyvastis.github.com/handyproxy",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
