@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/handyproxy/handyproxy/static/css/main.a5df7661.chunk.css",
-    "main.js": "/handyproxy/handyproxy/static/js/main.bf0eaa1d.chunk.js",
-    "main.js.map": "/handyproxy/handyproxy/static/js/main.bf0eaa1d.chunk.js.map",
-    "runtime-main.js": "/handyproxy/handyproxy/static/js/runtime-main.82d33c73.js",
-    "runtime-main.js.map": "/handyproxy/handyproxy/static/js/runtime-main.82d33c73.js.map",
-    "static/css/2.46fbdb1c.chunk.css": "/handyproxy/handyproxy/static/css/2.46fbdb1c.chunk.css",
-    "static/js/2.03c04aab.chunk.js": "/handyproxy/handyproxy/static/js/2.03c04aab.chunk.js",
-    "static/js/2.03c04aab.chunk.js.map": "/handyproxy/handyproxy/static/js/2.03c04aab.chunk.js.map",
-    "index.html": "/handyproxy/handyproxy/index.html",
-    "precache-manifest.1d498a41346e5d33f439fa4279f5e832.js": "/handyproxy/handyproxy/precache-manifest.1d498a41346e5d33f439fa4279f5e832.js",
-    "service-worker.js": "/handyproxy/handyproxy/service-worker.js",
-    "static/css/2.46fbdb1c.chunk.css.map": "/handyproxy/handyproxy/static/css/2.46fbdb1c.chunk.css.map",
-    "static/css/main.a5df7661.chunk.css.map": "/handyproxy/handyproxy/static/css/main.a5df7661.chunk.css.map"
+    "main.css": "/Gyvastis/handyproxy/static/css/main.a5df7661.chunk.css",
+    "main.js": "/Gyvastis/handyproxy/static/js/main.f3eea8f9.chunk.js",
+    "main.js.map": "/Gyvastis/handyproxy/static/js/main.f3eea8f9.chunk.js.map",
+    "runtime-main.js": "/Gyvastis/handyproxy/static/js/runtime-main.0614fff4.js",
+    "runtime-main.js.map": "/Gyvastis/handyproxy/static/js/runtime-main.0614fff4.js.map",
+    "static/css/2.46fbdb1c.chunk.css": "/Gyvastis/handyproxy/static/css/2.46fbdb1c.chunk.css",
+    "static/js/2.7c7e7521.chunk.js": "/Gyvastis/handyproxy/static/js/2.7c7e7521.chunk.js",
+    "static/js/2.7c7e7521.chunk.js.map": "/Gyvastis/handyproxy/static/js/2.7c7e7521.chunk.js.map",
+    "index.html": "/Gyvastis/handyproxy/index.html",
+    "precache-manifest.8db5501ecb6ad26b1a341a7fe2875bb1.js": "/Gyvastis/handyproxy/precache-manifest.8db5501ecb6ad26b1a341a7fe2875bb1.js",
+    "service-worker.js": "/Gyvastis/handyproxy/service-worker.js",
+    "static/css/2.46fbdb1c.chunk.css.map": "/Gyvastis/handyproxy/static/css/2.46fbdb1c.chunk.css.map",
+    "static/css/main.a5df7661.chunk.css.map": "/Gyvastis/handyproxy/static/css/main.a5df7661.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.82d33c73.js",
+    "static/js/runtime-main.0614fff4.js",
     "static/css/2.46fbdb1c.chunk.css",
-    "static/js/2.03c04aab.chunk.js",
+    "static/js/2.7c7e7521.chunk.js",
     "static/css/main.a5df7661.chunk.css",
-    "static/js/main.bf0eaa1d.chunk.js"
+    "static/js/main.f3eea8f9.chunk.js"
   ]
 }
