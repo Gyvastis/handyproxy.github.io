@@ -16,8 +16,9 @@ const MainWrapper = styled.div`
     width: 800px;
 `;
 
-const proxyDumpUrl = /http:\/\/localhost/.test(document.location.href) ? 'http://localhost:3000/proxies.json' : 'https://handyproxy-proxies.s3.eu-central-1.amazonaws.com/proxies.json';
+const proxyDumpUrl = 'https://raw.githubusercontent.com/Gyvastis/handyproxy-s3/master/proxies.json';
 const fetchProxyData = () => fetch(proxyDumpUrl).then(res => res.json());
+const fetchLastPingDate = () => fetch('https://api.github.com/repos/Gyvastis/handyproxy-s3/commits').then(res => res.json()).then(commits => commits[0].commit.author.date);
 
 const calculateProxyStats = proxies => {
   const proxyCountries = [];
@@ -55,7 +56,8 @@ class Main extends React.Component {
         average_ping: {},
         proxy_count: {}
       },
-      loading: true
+      loading: true,
+      lastPingDate: null
     };
   }
 
@@ -75,16 +77,23 @@ class Main extends React.Component {
         meta: calculateProxyStats(proxies),
       });
     });
+
+    fetchLastPingDate().then(lastPingDate => {
+      this.setState({
+        ...this.state,
+        lastPingDate,
+      })
+    });
   }
 
   render() {
-    const { data, meta, loading } = this.state;
+    const { data, meta, loading, lastPingDate } = this.state;
 
     return (
       <MainWrapper>
         <Header />
-        <DocumentationHeader />
-        <ProxyList data={data} loading={loading} />
+        <DocumentationHeader {...{ dumpUrl: proxyDumpUrl, lastPingDate }} />
+        <ProxyList {...{ data, loading }} />
         <DocumentationMiddle />
         <Statistics countryMetadata={meta} />
         <Reason />
