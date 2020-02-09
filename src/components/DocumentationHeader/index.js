@@ -21,7 +21,7 @@ const getFormattedDate = dateString => {
 
 export default ({ dumpUrl, lastPingDate }) => (
   <DocumentationWrapper>
-    <Code>GET {dumpUrl}</Code>
+    <Code>GET <a href={ dumpUrl } target="_blank">{ dumpUrl }</a></Code>
     <Code>Last pinged at {getFormattedDate(lastPingDate).toISOString()}</Code>
   </DocumentationWrapper>
 );
