@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/handyproxy/static/css/main.a5df7661.chunk.css",
-    "main.js": "/handyproxy/static/js/main.d484eb4b.chunk.js",
-    "main.js.map": "/handyproxy/static/js/main.d484eb4b.chunk.js.map",
+    "main.js": "/handyproxy/static/js/main.547cd969.chunk.js",
+    "main.js.map": "/handyproxy/static/js/main.547cd969.chunk.js.map",
     "runtime-main.js": "/handyproxy/static/js/runtime-main.97f96794.js",
     "runtime-main.js.map": "/handyproxy/static/js/runtime-main.97f96794.js.map",
     "static/css/2.46fbdb1c.chunk.css": "/handyproxy/static/css/2.46fbdb1c.chunk.css",
     "static/js/2.509f7b78.chunk.js": "/handyproxy/static/js/2.509f7b78.chunk.js",
     "static/js/2.509f7b78.chunk.js.map": "/handyproxy/static/js/2.509f7b78.chunk.js.map",
     "index.html": "/handyproxy/index.html",
-    "precache-manifest.b04c21df0b143b219ff1fec6f646e03b.js": "/handyproxy/precache-manifest.b04c21df0b143b219ff1fec6f646e03b.js",
+    "precache-manifest.cd0d114d092ad8f3719d31263adf58d4.js": "/handyproxy/precache-manifest.cd0d114d092ad8f3719d31263adf58d4.js",
     "service-worker.js": "/handyproxy/service-worker.js",
     "static/css/2.46fbdb1c.chunk.css.map": "/handyproxy/static/css/2.46fbdb1c.chunk.css.map",
     "static/css/main.a5df7661.chunk.css.map": "/handyproxy/static/css/main.a5df7661.chunk.css.map"
@@ -19,6 +19,6 @@
     "static/css/2.46fbdb1c.chunk.css",
     "static/js/2.509f7b78.chunk.js",
     "static/css/main.a5df7661.chunk.css",
-    "static/js/main.d484eb4b.chunk.js"
+    "static/js/main.547cd969.chunk.js"
   ]
 }
