@@ -13,7 +13,7 @@ const DocumentationWrapper = styled.div`
 export default () => (
   <DocumentationWrapper>
     <p>Example output:</p>
-    <Code>{JSON.stringify([{"ip":"109.70.189.75","port":"60282","country":"RU","protocol":"https","anonymity":"anonymous","responseTime":249,"hideIp":true}], null, "\t")}</Code>
+    <Code>{JSON.stringify([{"ip":"109.70.189.75","port":"60282","countryCode":"RU","protocol":"https","anonymity":"anonymous","responseTime":249,"hideIp":true}], null, "\t")}</Code>
     <p>
       Proxy anonimity types:<br />
       <Code>elite</Code> connection looks like a regular client<br />
