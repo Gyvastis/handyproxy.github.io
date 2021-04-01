@@ -16,9 +16,9 @@ const MainWrapper = styled.div`
     width: 800px;
 `;
 
-const proxyDumpUrl = 'https://raw.githubusercontent.com/Gyvastis/handyproxy-s3/master/proxies.json';
+const proxyDumpUrl = 'https://raw.githubusercontent.com/HandyProxy/node-proxy-checker/master/output/output.json';
 const fetchProxyData = () => fetch(proxyDumpUrl).then(res => res.json());
-const fetchLastPingDate = () => fetch('https://api.github.com/repos/Gyvastis/handyproxy-s3/commits').then(res => res.json()).then(commits => commits[0].commit.author.date);
+const fetchLastPingDate = () => fetch('https://api.github.com/reposHandyProxy/node-proxy-checker/commits').then(res => res.json()).then(commits => commits[0].commit.author.date);
 
 const calculateProxyStats = proxies => {
   const proxyCountries = [];
