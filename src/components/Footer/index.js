@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import TwitterIcon from 'components/Footer/TwitterIcon';
-import GitHubIcon from 'components/Footer/GitHubIcon';
+import TwitterIcon from './TwitterIcon';
+import GitHubIcon from './GitHubIcon';
 
 const FooterWrapper = styled.div`
   text-align: center;
@@ -19,9 +19,9 @@ const A = styled.a`
 export default () => (
   <FooterWrapper>
     <A target='_blank' rel='nofollow' href='https://twitter.com/@VaidasBagdonas'><TwitterIcon /></A>
-    <A target='_blank' rel='nofollow' href='https://github.com/Gyvastis'><GitHubIcon /></A>
+    <A target='_blank' rel='nofollow' href='https://github.com/HandyProxy'><GitHubIcon /></A>
     <br />
-    With ❤️<A target="_blank" href="https://vaidasbagdonas.com">Vaidas Bagdonas</A><br />
+    With ❤️ from <A target="_blank" href="https://vaidasbagdonas.com">Vaidas Bagdonas</A><br />
     Amsterdam
   </FooterWrapper>
 );

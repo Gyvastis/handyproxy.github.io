@@ -32,7 +32,7 @@ const getRainbowColors = numberOfItems => {
   return colors;
 }
 
-const getTotalProxyCount = countryMetadata => {
+const getTotalProxyCount = (countryMetadata = {}) => {
   let totalProxyCount = 0;
 
   Object.values(countryMetadata.proxy_count).map(count => totalProxyCount+=parseInt(count));
